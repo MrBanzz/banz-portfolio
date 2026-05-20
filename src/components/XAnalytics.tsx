@@ -117,7 +117,7 @@ const itemVariants = {
 
 const XAnalytics = () => {
   return (
-    <section id="x-analytics" className="py-20 relative overflow-hidden">
+    <section id="x-analytics" className="py-16 md:py-20 relative overflow-hidden">
       {/* Animated gradient orbs background */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -182,7 +182,7 @@ const XAnalytics = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
           {/* Analytics Screenshot */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -209,7 +209,7 @@ const XAnalytics = () => {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: true, margin: "-30px" }}
             className="grid grid-cols-1 md:grid-cols-2 gap-4"
           >
             {metrics.map((metric) => (
