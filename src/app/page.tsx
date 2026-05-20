@@ -6,6 +6,7 @@ import Services from "@/components/Services";
 import Experience from "@/components/Experience";
 import WhyMe from "@/components/WhyMe";
 import Impact from "@/components/Impact";
+import XAnalytics from "@/components/XAnalytics";
 import Contact from "@/components/Contact";
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       <Experience />
       <WhyMe />
       <Impact />
+      <XAnalytics />
       <Contact />
     </div>
   );
