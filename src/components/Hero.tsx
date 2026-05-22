@@ -37,6 +37,7 @@ const Hero = () => {
                   priority
                 />
               </div>
+              <div className="text-center mt-4">Mr.Banz</div>
             </div>
           </motion.div>
 
