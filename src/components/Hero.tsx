@@ -37,7 +37,7 @@ const Hero = () => {
                   priority
                 />
               </div>
-              <div className="text-center mt-3 font-serif text-2xl font-semibold bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">Mr.Banz</div>
+              <div className="text-center mt-3 text-2xl font-bold bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">Mr.Banz</div>
             </div>
           </motion.div>
 
