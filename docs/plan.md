@@ -1,56 +1,28 @@
 ## Goal
-Add a new premium "X Analytics" section to the Banz portfolio website after the Impact section, featuring a luxury Web3 analytics dashboard with dark futuristic aesthetic, glassmorphism cards, and Framer Motion animations.
+Add "Mr.Banz" text below the avatar in the Hero section with elegant purple gradient typography.
 
 ## Context
-- Next.js portfolio using Tailwind CSS, Framer Motion, and lucide-react
-- Current dark premium theme with purple neon accents and glassmorphism
-- Existing sections in order: Hero, Stats, About, Services, Experience, WhyMe, Impact, Contact
-- Impact section uses id="impact" and is positioned after WhyMe
-- Uploaded screenshot: `Screenshot-2026-05-21-020754.png`
+The portfolio is a Next.js 16 project with Tailwind CSS v4 and Framer Motion. The Hero component is at `src/components/Hero.tsx`, with the avatar image currently standing alone. The existing design already uses purple gradients (line 53-54), so the new text should match that aesthetic.
 
 ## Acceptance Criteria
-- AC-1: Screenshot moved/renamed to `public/x-analytics.png`
-- AC-2: New `XAnalytics.tsx` component created in `src/components/`
-- AC-3: Component added to `src/app/page.tsx` after Impact section, before Contact
-- AC-4: Navbar updated to include "X Analytics" link
-- AC-5: Desktop layout shows analytics screenshot on one side, metric cards on the other
-- AC-6: Mobile layout stacks vertically with clean spacing
-- AC-7: All 11 metrics displayed: Verified followers (1.3K/6.1K), Active followers (2.6K/6.1K), Impressions (2.1M), Engagement rate (6.2%), Engagements (74.8K), Profile visits (6.9K), Replies (29.8K), Likes (34.8K), Reposts (2.5K), Bookmarks (507), Shares (165)
-- AC-8: Visual elements: dark futuristic Web3 aesthetic, purple neon glow accents, premium glassmorphism cards, glowing rounded dashboard frame for screenshot, animated purple gradient orbs in background, lucide-react icons, Framer Motion reveal animations with stagger effects
-- AC-9: `npm run build` completes without errors
-- AC-10: `npm run lint` passes with no errors
-- AC-11: Changes committed and pushed to main
+- **AC-1:** "Mr.Banz" text appears directly below the avatar image in the Hero section.
+- **AC-2:** Text is horizontally centered relative to the avatar (verified visually).
+- **AC-3:** Text uses purple gradient styling matching existing design language (e.g., `bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent`).
+- **AC-4:** Typography is elegant with appropriate font size and weight.
+- **AC-5:** Spacing between avatar and text is balanced (considering existing gap/padding).
+- **AC-6:** No other sections are modified.
+- **AC-7:** `npm run build` completes without errors.
+- **AC-8:** `npm run lint` completes without errors.
+- **AC-9:** Changes are committed and pushed to main branch.
 
 ## Implementation Notes
-1. **Move screenshot**: `mv /home/harness/cyops_data/workspace/por/Screenshot-2026-05-21-020754.png /home/harness/cyops_data/workspace/por/public/x-analytics.png`
-
-2. **Create XAnalytics.tsx component** - Key files:
-   - New file: `src/components/XAnalytics.tsx`
-   - Use similar patterns from `Impact.tsx` for animations and styling
-   - Section id should be `id="x-analytics"`
-   - Import lucide-react icons: TrendingUp, Users, Heart, MessageCircle, Bookmark, Share2, Eye, Activity, Zap, Award, Star
-   - Create glassmorphism cards with `bg-white/10 backdrop-blur-md border border-white/20`
-   - Add animated gradient orbs using CSS/Framer Motion
-   - Layout: two-column grid on desktop (`md:grid-cols-2`), single column on mobile
-   - Screenshot container with purple glow effect: `rounded-2xl shadow-[0_0_30px_rgba(168,85,247,0.4)]`
-
-3. **Update page.tsx**:
-   - Import XAnalytics component
-   - Add `<XAnalytics />` after `<Impact />` and before `<Contact />`
-
-4. **Update Navbar.tsx**:
-   - Add `{ label: "X Analytics", href: "#x-analytics" }` to navItems array after Impact
-
-5. **Build and lint**:
-   - Run `npm run build` to verify no errors
-   - Run `npm run lint` and fix any issues
-
-6. **Commit and push**:
-   - Commit with descriptive message
-   - Push to main branch
+1. **File touchpoint:** `src/components/Hero.tsx` - modify the avatar section (lines 23-41).
+2. **Approach:** Add a motion.h2 or styled div immediately after the Image component, inside the same container, with centered text styling.
+3. **Styling approach:** Use existing purple gradient classes from line 53 (`bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent`), add appropriate font styling (e.g., `font-serif` or elegant sans-serif), and use `text-center` for centering.
+4. **Spacing:** Add a small margin-top (`mt-3` or `mt-4`) to create balanced spacing between avatar and name.
+5. **Run verification:** After editing, run `npm run build` and `npm run lint` to verify no issues.
 
 ## Out of Scope
-- Removing or modifying any existing sections
-- Adding new pages or routes
-- Modifying the color theme (keep existing dark theme)
+- Modifying any other component or section
+- Changing the avatar image or its container styling
 - Adding new dependencies
